@@ -1,9 +1,8 @@
 import unittest
-from ..models.FoochowRomanized import FoochowRomanizedSyllable
-from ..parser import parse_ciklin
-from ..utils import normalise, denormalise
-from ..convert import foochow_romanized_to_ciklin, ciklin_to_foochow_romanized
-
+from python.pyhokchew.models.FoochowRomanized import FoochowRomanizedSyllable
+from python.pyhokchew.parser import parse_ciklin
+from python.pyhokchew.utils import normalise, denormalise
+from python.pyhokchew.convert import foochow_romanized_to_ciklin, ciklin_to_foochow_romanized
 
 class ParserTestCase(unittest.TestCase):
     def setUp(self):

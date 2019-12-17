@@ -1,6 +1,6 @@
 import unittest
-from ..models.yngping.YngPingTwo import YngPingSyllable
-from ..utils import normalise
+from python.pyhokchew.models.yngping.YngPingTwo import YngPingSyllable
+from python.pyhokchew.utils import normalise
 
 
 class YngPingParseTestCase(unittest.TestCase):
