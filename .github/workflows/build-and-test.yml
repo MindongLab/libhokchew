@@ -1,8 +1,8 @@
 on: push
 name: Build and Test
 jobs:
-  checks:
-    name: run
+  build-and-test:
+    name: Bazel Build and Test
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
