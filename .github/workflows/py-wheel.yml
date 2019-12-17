@@ -8,16 +8,17 @@ jobs:
     - uses: actions/checkout@master
 
     - name: Bazel build
-      uses: ngalaiko/bazel-action/1.2.1@master
+      uses: docker
+      image: ngalayko/bazel-action:1.2.1
       with:
-        args: build //python:wheel
+        args: |
+            bazel build //python:wheel && \
+            cp -r bazel-bin/ bazel-bin-copy/
 
-    - run: ls -la
+    - run: cd bazel-bin-copy/ && ls -la
 
-    - run: cd bazel-bin/ && ls -la
-    - run: cd bazel-bin/python && ls -la
     - name: Publish artifact
       uses: actions/upload-artifact@master
       with:
-        name: wheel
-        path: bazel-bin/python/pyhokchew-0.1.1.dev-py3-none-any.whl
+        name: pyhokchew-0.1.1.dev-py3-none-any.whl
+        path: bazel-bin/python
