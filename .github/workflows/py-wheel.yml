@@ -1,0 +1,25 @@
+on: push
+name: PublishPyWheel
+jobs:
+  publish-py-wheel:
+    name: PublishPyWheel
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Bazel build
+      uses: docker://l.gcr.io/google/bazel:1.2.1
+      with:
+        entrypoint: /bin/bash
+        args: -c "bazel build //python:wheel && cp -r bazel-bin/ bazel-bin-copy/"
+        # Making a copy of bazel-bin/ because it is a symlink within
+        # the docker container. And the host machine doesn't have 
+        # access to the symlink's target directory.
+
+    - run: cd bazel-bin-copy/ && ls -la
+
+    - name: Publish artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: pyhokchew-0.1.1.dev-py3-none-any.whl
+        path: bazel-bin-copy/python
