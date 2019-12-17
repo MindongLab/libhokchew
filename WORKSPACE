@@ -1,14 +1,17 @@
-load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
 # Python
-http_archive(
+git_repository(
     name = "rules_python",
-    url = "https://github.com/bazelbuild/rules_python/releases/download/0.0.1/rules_python-0.0.1.tar.gz",
-    sha256 = "aa96a691d3a8177f3215b14b0edc9641787abaaa30363a080165d06ab65e1161",
+    commit = "38f86fb55b698c51e8510c807489c9f4e047480e",
+    remote = "https://github.com/bazelbuild/rules_python.git",
 )
+
 load("@rules_python//python:repositories.bzl", "py_repositories")
+
 py_repositories()
 
 # For Python packaging rules.
 load("@rules_python//python:pip.bzl", "pip_repositories")
+
 pip_repositories()

@@ -1,0 +1,19 @@
+on: push
+name: PublishPyWheel
+jobs:
+  publish-py-wheel:
+    name: PublishPyWheel
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Bazel build
+      uses: ngalaiko/bazel-action/1.2.1@master
+      with:
+        args: build //python:wheel
+
+    - name: Publish artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: wheel
+        path: bazel-bin/python/pyhokchew-0.1.1.dev-py3-none-any.whl
