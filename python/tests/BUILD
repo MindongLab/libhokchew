@@ -1,15 +1,16 @@
 load("@rules_python//python:defs.bzl", "py_test")
 
 test_suite(
-    name="tests",
+    name = "tests",
     tests = [
         ":ParserTest",
-        ":YngPingParseTest"
-    ]
+        ":YngPingParseTest",
+    ],
 )
 
 py_test(
     name = "ParserTest",
+    size = "small",
     srcs = ["ParserTest.py"],
     deps = [
         "//python:pyhokchew",
@@ -18,6 +19,7 @@ py_test(
 
 py_test(
     name = "YngPingParseTest",
+    size = "small",
     srcs = ["YngPingParseTest.py"],
     deps = [
         "//python:pyhokchew",
