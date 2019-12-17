@@ -10,7 +10,7 @@ jobs:
     - name: Bazel build
       uses: docker://l.gcr.io/google/bazel:1.2.1
       with:
-        entrypoint:
+        entrypoint: /bin/bash
         args: |
             bazel build //python:wheel && \
             cp -r bazel-bin/ bazel-bin-copy/
