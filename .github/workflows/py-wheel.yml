@@ -12,6 +12,9 @@ jobs:
       with:
         entrypoint: /bin/bash
         args: -c "bazel build //python:wheel && cp -r bazel-bin/ bazel-bin-copy/"
+        # Making a copy of bazel-bin/ because it is a symlink within
+        # the docker container. And the host machine doesn't have 
+        # access to the symlink's target directory.
 
     - run: cd bazel-bin-copy/ && ls -la
 
