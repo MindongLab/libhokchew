@@ -8,8 +8,7 @@ jobs:
     - uses: actions/checkout@master
 
     - name: Bazel build
-      uses: docker
-      image: ngalayko/bazel-action:1.2.1
+      uses: docker://ngalayko/bazel-action:1.2.1
       with:
         args: |
             bazel build //python:wheel && \
