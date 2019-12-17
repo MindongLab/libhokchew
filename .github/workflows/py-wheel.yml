@@ -11,7 +11,7 @@ jobs:
       uses: docker://l.gcr.io/google/bazel:1.2.1
       with:
         entrypoint: /bin/bash
-        args: -c 'bazel build //python:wheel && cp -r bazel-bin/ bazel-bin-copy/'
+        args: -c "bazel build //python:wheel && cp -r bazel-bin/ bazel-bin-copy/"
 
     - run: cd bazel-bin-copy/ && ls -la
 
