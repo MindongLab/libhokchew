@@ -12,6 +12,10 @@ jobs:
       with:
         args: build //python:wheel
 
+    - run: ls -la
+
+    - run: cd bazel-bin/ && ls -la
+    - run: cd bazel-bin/python && ls -la
     - name: Publish artifact
       uses: actions/upload-artifact@master
       with:
