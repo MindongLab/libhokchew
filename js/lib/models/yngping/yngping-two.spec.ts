@@ -3,7 +3,6 @@ import { YngPingTwoSyllable, parseHandwriting, ParseError } from "@hokchewjs/lib
 import { ParsingContext } from "./yngping-two";
 
 describe("YngPingTwoSyllable parsing test", function () {
-s
     it("parses handwriting and converts to typing (end-to-end)", function () {
         expect(_p("güong")).toBe("gyong55");
         expect(_p("sēik")).toBe("seik33");
@@ -18,7 +17,15 @@ s
         expect(_p("dîu")).toBe("diu242");
         expect(_p("loh")).toBe("loh5");
         expect(_p("sǒ", { isMiddleOfPhrase: true })).toBe("so21");
-        // wáh lǐng nì ö̂ bung ngang
+        expect(_p("wáh")).toBe("wah23");
+        expect(_p("lǐng")).toBe("ling212");
+        expect(_p("lǐng", { isMiddleOfPhrase: true })).toBe("ling21");
+        expect(_p("nì")).toBe("ni53");
+        //expect(_p("ö̂")).toBe("o242");
+        expect(_p("bung")).toBe("bung55");
+        expect(_p("ngang")).toBe("ngang55");
+        expect(_p("iéh")).toBe("ieh23");
+
     });
 
     function _p(s: string, context?: ParsingContext): string {
