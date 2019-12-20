@@ -32,6 +32,7 @@ describe("YngPingTwoSyllable parsing test", function () {
         expect(_p("zo\u030C")).toBe("zo212")
         expect(_p("z\u01D2")).toBe("zo212")
         expect(_p("ngie\u{30C}")).toBe("ngie212")
+        expect(_p("l\u{EB}\u{302}\u{FC}")).toBe("loey242")
     })
 
     function _p(s: string, context?: ParsingContext): string {

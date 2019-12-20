@@ -2,8 +2,17 @@ import { YngPingTwoSyllable, ParseError, parseHandwriting } from "@hokchewjs/lib
 
 let txtInput: HTMLTextAreaElement = document.querySelector("#txtInput");
 let txtOutput: HTMLTextAreaElement = document.querySelector("#txtOutput");
+let toggleUpperScript: HTMLInputElement = document.querySelector("#toggleUpperScript");
+var shouldReplace = false;
 
 txtInput.oninput = () => {
+    let txt = txtInput.value;
+    txtOutput.value = convert(txt);
+}
+
+shouldReplace = toggleUpperScript.checked;
+toggleUpperScript.onchange = () => {
+    shouldReplace = toggleUpperScript.checked;
     let txt = txtInput.value;
     txtOutput.value = convert(txt);
 }
@@ -14,9 +23,26 @@ function convert(s: string): string {
         if ((tryParse as ParseError).message) {
             return t;
         } else {
-            return (tryParse as YngPingTwoSyllable).getTypingForm()
+            return maybeReplaceWithUpperScript(
+                (tryParse as YngPingTwoSyllable).getTypingForm());
         }
     }).join('');
+}
+
+
+function maybeReplaceWithUpperScript(s: string) {
+    function replaceAll(str, find, replace) {
+        return str.replace(new RegExp(find, 'g'), replace);
+    }
+    if (!shouldReplace) return s;
+    s = replaceAll(s, '1','¹');
+    s = replaceAll(s, '2','²');
+    s = replaceAll(s, '3','³');
+    s = replaceAll(s, '4','⁴');
+    s = replaceAll(s, '5','⁵');
+    s = replaceAll(s, '7','⁷');
+    s = replaceAll(s, '8','⁸');
+    return s;
 }
 
 function tokenize(s: string): string[] {
