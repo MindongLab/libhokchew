@@ -25,7 +25,6 @@ describe("YngPingTwoSyllable parsing test", function () {
         expect(_p("bung")).toBe("bung55");
         expect(_p("ngang")).toBe("ngang55");
         expect(_p("iéh")).toBe("ieh23");
-
     });
 
     function _p(s: string, context?: ParsingContext): string {

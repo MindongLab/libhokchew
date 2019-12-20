@@ -1,6 +1,50 @@
 <html>
-    <body>
-        <h1>Hello world</h1>
-        <script src="/bundle.js"></script>
-    </body>
+  <head>
+    <style>
+      .fullscreen-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px;
+        display:flex;
+        flex-direction: column;
+      }
+      .inner-container {
+          height:100%;
+          display:grid;
+      }
+      .textarea-container {
+          display:grid;
+          grid-template-rows: max-content auto;
+      }
+      textarea {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fullscreen-container">
+      <h1>榕拼 (0.2) 手写转键入</h1>
+      <div class="inner-container">
+        <div class="textarea-container">
+          <h3>榕拼手写</h3>
+          <textarea
+            id="txtInput"
+            placeholder="粘贴需要转换的文本..."
+          ></textarea>
+        </div>
+        <div class="textarea-container">
+          <h3>榕拼0.2键入</h3>
+          <textarea id="txtOutput" readonly></textarea>
+        </div>
+      </div>
+      <p>
+        <i>暂不支持oo和轻声。无上下文信息，半阳去/半阴去的转换可能不准确。</i>
+      </p>
+    </div>
+    <script src="/bundle.js"></script>
+    <script></script>
+  </body>
 </html>

@@ -153,8 +153,12 @@ export function parseHandwriting(s: string, context?: ParsingContext)
         }
     }
 
+    if (vowels.length == 0) {
+        return { message: "No vowel!" } as ParseError;
+    }
+
     if (!toneCarryingVowel) {
-        tones = new Set(["55","5"]);
+        tones = new Set(["55", "5"]);
     } else {
         tones = new Set(HANDWRITTEN_VOWELS[toneCarryingVowel].possibleTones);
     }
