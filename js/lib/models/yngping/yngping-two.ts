@@ -37,7 +37,7 @@ const VOWELS_WITH_DIACRITICS = {
 };
 
 const HANDWRITTEN_VOWELS = getHandwrittenVowelsMappings();
-console.log(HANDWRITTEN_VOWELS);
+
 const HANDWRITTEN_VOWELS_KEYS_LONGEST_FIRST =
     Object.keys(HANDWRITTEN_VOWELS).sort(s => -s.length);
 
