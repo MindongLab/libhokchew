@@ -93,7 +93,7 @@ export class YngPingTwoSyllable implements IYngPingTwoSyllable {
 
 export function parseHandwriting(s: string, context?: ParsingContext)
     : YngPingTwoSyllable | ParseError {
-    let remaining = s;
+    let remaining = s.normalize("NFC");
     let initial: string = '';
     let coda: string = '';
     let vowels = [];
@@ -104,7 +104,8 @@ export function parseHandwriting(s: string, context?: ParsingContext)
 
     // Try rip off the initial consonant
     for (let i = 0; i < YP_CONSONANTS_LONGEST_FIRST.length; ++i) {
-        if (remaining.toLowerCase().startsWith(YP_CONSONANTS_LONGEST_FIRST[i])) {
+        if (remaining.toLowerCase().startsWith(
+            YP_CONSONANTS_LONGEST_FIRST[i].normalize("NFC"))) {
             initial = YP_CONSONANTS_LONGEST_FIRST[i];
             remaining = remaining.substring(initial.length);
             break;

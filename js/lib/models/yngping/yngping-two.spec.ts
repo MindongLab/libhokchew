@@ -27,6 +27,11 @@ describe("YngPingTwoSyllable parsing test", function () {
         expect(_p("iéh")).toBe("ieh23");
     });
 
+    it("parses non-normalized strings", function() {
+        expect(_p("zo\u030C")).toBe("zo212")
+        expect(_p("z\u01D2")).toBe("zo212")
+    })
+
     function _p(s: string, context?: ParsingContext): string {
         let result = parseHandwriting(s, context);
         if ((result as ParseError).message) {
