@@ -48,6 +48,8 @@ function tokenize(s: string): string[] {
     return output;
 }
 
+const RE_CJK = /[⺀-\u2efeㆠ-\u31be㇀-\u31ee㈀-㋾㌀-㏾㐀-\u4dbe一-\u9ffe豈-\ufafe︰-﹎]|[\ud840-\ud868\ud86a-\ud86c][\udc00-\udfff]|\ud869[\udc00-\udede\udf00-\udfff]|\ud86d[\udc00-\udf3e\udf40-\udfff]|\ud86e[\udc00-\udc1e]|\ud87e[\udc00-\ude1e]/
+
 function getTokenType(c: string) {
     if (c == ' ' || c == '\t' || c == '\r' || c=='\n') {
         return TokenType.WHITESPACES;
@@ -55,8 +57,12 @@ function getTokenType(c: string) {
     else if (SINGLE_SYMBOLS.has(c)) {
         return TokenType.SINGLE_SYMBOL;
     }
+    else if (RE_CJK.test(c)) {
+        return TokenType.CJK
+    }
     return TokenType.OTHER;
 }
+
 
 
 const SINGLE_SYMBOLS = new Set([
@@ -76,5 +82,6 @@ const SINGLE_SYMBOLS = new Set([
 enum TokenType {
     WHITESPACES,
     SINGLE_SYMBOL, // `",._-/\
-    OTHER
+    CJK,
+    OTHER,
 }
