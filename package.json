@@ -1,0 +1,36 @@
+{
+  "name": "libhokchew",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MindongLab/libhokchew.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MindongLab/libhokchew/issues"
+  },
+  "homepage": "https://github.com/MindongLab/libhokchew#readme",
+  "devDependencies": {
+    "@bazel/bazel": "latest",
+    "@bazel/jasmine": "^0.42.3",
+    "@bazel/rollup": "^0.42.3",
+    "@bazel/terser": "^0.42.3",
+    "@bazel/typescript": "^0.41.0",
+    "@types/jasmine": "^3.5.0",
+    "rollup": "^1.27.13",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "terser": "^4.4.3",
+    "typescript": "^3.7.3"
+  }
+}

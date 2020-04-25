@@ -15,8 +15,6 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
-lib64/
 parts/
 sdist/
 var/
@@ -108,3 +106,6 @@ ENV/
 
 # Bazel
 bazel-*
+
+# Node.js
+node_modules
