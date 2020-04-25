@@ -34,10 +34,10 @@ load("@build_bazel_rules_nodejs//:index.bzl", "node_repositories", "npm_install"
 
 node_repositories()
 
-npm_install(
+yarn_install(
     name = "npm",
     package_json = "//:package.json",
-    package_lock_json = "//:package-lock.json",
+    yarn_lock = "//:yarn.lock",
 )
 
 load("@npm//:install_bazel_dependencies.bzl", "install_bazel_dependencies")

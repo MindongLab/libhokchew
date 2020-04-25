@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/MindongLab/libhokchew#readme",
   "devDependencies": {
-    "@bazel/bazel": "latest",
+    "@bazel/bazelisk": "^1.4.0",
+    "@bazel/ibazel": "^0.13.0",
     "@bazel/jasmine": "^0.42.3",
     "@bazel/rollup": "^0.42.3",
     "@bazel/terser": "^0.42.3",
