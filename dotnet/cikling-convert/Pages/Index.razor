@@ -1,7 +1,33 @@
 ﻿@page "/"
+@using LibHokchew.Shared;
 
-<h1>Hello, world!</h1>
+<h1>戚林转榕拼（福州市区）</h1>
 
-Welcome to your new app.
+<textarea id="input" @bind-value="InputString" @bind-value:event="oninput" ></textarea>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+推测福州市区发音: @OutputString
+@* <textarea id="output" @bind-value="OutputString" readonly></textarea> *@
+
+@code{
+    private string InputString { get; set; }
+
+    private string OutputString { get { return Convert(InputString); } }
+
+    string Convert(string input) {
+        if (string.IsNullOrEmpty(input.Trim())) {
+            return "";
+        }
+        try {
+            if (input.Trim().Length == 2) {
+                return CikLingUtil.ToYngPingHokchewToneless(input.Trim());
+            }
+            if (input.Trim().Length == 4) {
+                return CikLingUtil.ToYngPingHokchew(input.Trim());
+            }
+            return "";
+        } catch (Exception e) {
+            return "格式不正确: " + e.Message;
+        }
+    }
+
+}
