@@ -1,12 +1,20 @@
 ﻿@page "/"
 @using LibHokchew.Shared;
+@using System.Text.RegularExpressions;
 
-<h1>戚林转榕拼（福州市区）</h1>
+<h3>戚林转榕拼（福州市区）</h3>
 
-<textarea id="input" @bind-value="InputString" @bind-value:event="oninput" ></textarea>
+<h4>输入：戚林反切字</h4>
+<p>例：柳香 下平；他賓</p>
+<textarea id="input" class="full-width" @bind-value="InputString" @bind-value:event="oninput" ></textarea>
 
-推测福州市区发音: @OutputString
-@* <textarea id="output" @bind-value="OutputString" readonly></textarea> *@
+<hr/>
+<h4>输出：推测福州市区发音</h4>
+<pre class="output">
+    <code>
+        @OutputString
+    </code>
+</pre>
 
 @code{
     private string InputString { get; set; }
@@ -14,15 +22,16 @@
     private string OutputString { get { return Convert(InputString); } }
 
     string Convert(string input) {
-        if (string.IsNullOrEmpty(input.Trim())) {
+        if (string.IsNullOrEmpty(input)) {
             return "";
         }
+        var trimmed = Regex.Replace(input, @"\s+", "");
         try {
-            if (input.Trim().Length == 2) {
-                return CikLingUtil.ToYngPingHokchewToneless(input.Trim());
+            if (trimmed.Length == 2) {
+                return CikLingUtil.ToYngPingHokchewToneless(trimmed);
             }
-            if (input.Trim().Length == 4) {
-                return CikLingUtil.ToYngPingHokchew(input.Trim());
+            if (trimmed.Length == 4) {
+                return CikLingUtil.ToYngPingHokchew(trimmed);
             }
             return "";
         } catch (Exception e) {
