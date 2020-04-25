@@ -1,4 +1,5 @@
 ﻿@page "/"
+@page "/index.html"
 @using LibHokchew.Shared;
 @using System.Text.RegularExpressions;
 
@@ -10,11 +11,7 @@
 
 <hr/>
 <h4>输出：推测福州市区发音</h4>
-<pre class="output">
-    <code>
-        @OutputString
-    </code>
-</pre>
+<pre class="output"><code>@OutputString</code></pre>
 
 @code{
     private string InputString { get; set; }
