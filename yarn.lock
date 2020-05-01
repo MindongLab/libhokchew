@@ -12,10 +12,10 @@
   resolved "https://registry.yarnpkg.com/@bazel/ibazel/-/ibazel-0.13.0.tgz#2307bdf9ba0ad9835ee603b8fb521822bf3b8a11"
   integrity sha512-SFyS6oiibp8KW9BgAU+Tk0DhrH/sJx9om/OlB/Mg4hDEn8F8dj2QRqJE6CVhBCtLDcZDeD7WIAZKQDxKRYIShw==
 
-"@bazel/jasmine@1.6.0":
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/@bazel/jasmine/-/jasmine-1.6.0.tgz#c469ab8725d9a2e48c0c3c965861ff8add9272ac"
-  integrity sha512-WtOQDtIMHKTxlp0+FcdrADV6LMrpJV7eEGZippSNFPL5YhwwrPfCSOs5WkooatsrjL5YEszswzqQXFjvC7EZKQ==
+"@bazel/jasmine@1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@bazel/jasmine/-/jasmine-1.6.1.tgz#fd7d10fe4cbf180f8be9db54b5da5c587d392d95"
+  integrity sha512-uG/d2CbU8Pa7Fh0Khkv9BLhMQgMzb5xGhd9/HbvhvTk45akI4HuP/hXcAUU01Cg09C0N04SAjy7hmrZHBuPpeg==
   dependencies:
     jasmine "~3.5.0"
     jasmine-core "~3.5.0"
