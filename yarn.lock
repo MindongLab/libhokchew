@@ -22,10 +22,10 @@
     jasmine-reporters "~2.3.2"
     v8-coverage "1.0.9"
 
-"@bazel/rollup@1.6.0":
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/@bazel/rollup/-/rollup-1.6.0.tgz#c0bdad0ad0ba5c5b2e21d1634dc2ce48840ca044"
-  integrity sha512-MLF7laHX3CSAJH+RbIEVWgnQdz3U8dPkdJWJqiX/z9mUSEgC47LNsMBPKlRy1TpOJOpw1j0vLaJv0qN/bgq9NQ==
+"@bazel/rollup@1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@bazel/rollup/-/rollup-1.6.1.tgz#7ec9d39a3fca23256fca55410339724804802616"
+  integrity sha512-FhblJkpd8VKl9txhAAIotSsIOHRpPd2FgJG7Op3uV7LfaCVBmUs3XDBZCgfwt5wmEpd3lwCHA1Ei+O/URS2+5w==
 
 "@bazel/terser@1.6.1":
   version "1.6.1"
