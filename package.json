@@ -22,7 +22,7 @@
   "homepage": "https://github.com/MindongLab/libhokchew#readme",
   "devDependencies": {
     "@bazel/bazelisk": "1.4.0",
-    "@bazel/ibazel": "0.13.0",
+    "@bazel/ibazel": "0.13.1",
     "@bazel/jasmine": "1.6.1",
     "@bazel/rollup": "1.6.1",
     "@bazel/terser": "1.6.1",
