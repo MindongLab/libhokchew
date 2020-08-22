@@ -1,6 +1,5 @@
 using System;
 using Xunit;
-using LibHokchew.Shared;
 using FluentAssertions;
 
 namespace LibHokchew.Shared.Tests
