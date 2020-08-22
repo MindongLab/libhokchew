@@ -1,0 +1,30 @@
+pull_request_rules:
+  - name: Automatic merge on approval
+    conditions:
+      - "#approved-reviews-by>=1"
+      - status-success=BazelBuildAndTest
+      - status-success=PublishPyWheel
+      - label!=do-not-merge
+      - base=master
+    actions:
+      merge:
+        method: squash
+  - name: Automatic merge if automerge label is present
+    conditions:
+      - status-success=BazelBuildAndTest
+      - status-success=PublishPyWheel
+      - label=automerge
+      - label!=do-not-merge
+      - base=master
+    actions:
+      merge:
+        method: squash
+  - name: Automatic merge (skip tests)
+    conditions:
+      - label=skip-tests
+      - label=automerge
+      - label!=do-not-merge
+      - base=master
+    actions:
+      merge:
+        method: squash
