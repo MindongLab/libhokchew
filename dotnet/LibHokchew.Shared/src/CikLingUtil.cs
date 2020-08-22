@@ -4,6 +4,9 @@ using LibHokchew.Protos;
 
 namespace LibHokchew.Shared
 {
+    /// <summary>
+    /// 用于处理戚林八音音系数据的工具函数。
+    /// </summary>
     public static class CikLingUtil
     {
         private static readonly IDictionary<char, Initial> CharToInitial = new Dictionary<char, Initial>() {
@@ -222,6 +225,7 @@ namespace LibHokchew.Shared
         /// https://yngping.zingzeu.org/spec/v0.4.0-preview2/hukziu.html
         /// </summary>
         /// <param name="cikling">戚林八音的声韵母. 格式如“柳春”</param>
+        /// <returns>推测的现代福州市区读音。不含声调。</returns>
         public static string ToYngPingHokchewToneless(string ciklingToneless)
         {
             if (ciklingToneless.Length != 2)
@@ -250,6 +254,7 @@ namespace LibHokchew.Shared
         /// 
         /// https://yngping.zingzeu.org/spec/v0.4.0-preview2/hukziu.html
         /// </summary>
+        /// <returns>推测的现代福州市区读音。不含声调。</returns>
         public static string ToYngPingHokchewToneless(Initial initial, Final final)
         {
             return CikLingInitialToYngPing[initial] + GetYngPingHokchewFinal(
