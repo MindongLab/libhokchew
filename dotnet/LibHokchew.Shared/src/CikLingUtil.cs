@@ -172,8 +172,7 @@ namespace LibHokchew.Shared
         /// 
         /// https://yngping.zingzeu.org/spec/v0.4.0-preview2/hukziu.html
         /// </summary>
-        /// <param name="cikling"></param>
-        /// <returns></returns>
+        /// <param name="cikling">戚林八音的音韵地位(声韵调). 格式如"柳春上平"</param>
         public static string ToYngPingHokchew(string cikling)
         {
             if (cikling.Length != 4)
@@ -201,6 +200,13 @@ namespace LibHokchew.Shared
             return ToYngPingHokchew(initial, final, tone);
         }
 
+        /// <summary>
+        /// 从戚林八音的音韵地位推导出现代福州市区读音。
+        /// 
+        /// 现代福州市区读音用榕拼 0.4.0 表示。
+        /// 
+        /// https://yngping.zingzeu.org/spec/v0.4.0-preview2/hukziu.html
+        /// </summary>
         public static string ToYngPingHokchew(Initial initial, Final final, Tone tone)
         {
             return CikLingInitialToYngPing[initial]
@@ -208,6 +214,14 @@ namespace LibHokchew.Shared
                 + CikLingToneToYngPing[tone];
         }
 
+        /// <summary>
+        /// 从戚林八音的声韵母推导出现代福州市区读音。假定声调为上平。
+        /// 
+        /// 现代福州市区读音用榕拼 0.4.0 表示。
+        /// 
+        /// https://yngping.zingzeu.org/spec/v0.4.0-preview2/hukziu.html
+        /// </summary>
+        /// <param name="cikling">戚林八音的声韵母. 格式如“柳春”</param>
         public static string ToYngPingHokchewToneless(string ciklingToneless)
         {
             if (ciklingToneless.Length != 2)
@@ -229,6 +243,13 @@ namespace LibHokchew.Shared
             return ToYngPingHokchewToneless(initial, final);
         }
 
+        /// <summary>
+        /// 从戚林八音的声韵母推导出现代福州市区读音。假定声调为上平。
+        /// 
+        /// 现代福州市区读音用榕拼 0.4.0 表示。
+        /// 
+        /// https://yngping.zingzeu.org/spec/v0.4.0-preview2/hukziu.html
+        /// </summary>
         public static string ToYngPingHokchewToneless(Initial initial, Final final)
         {
             return CikLingInitialToYngPing[initial] + GetYngPingHokchewFinal(

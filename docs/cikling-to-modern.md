@@ -10,7 +10,7 @@
 |---|---|---|---|----|
 春 | ung | oung | uk | ouk
 花 | ua | ua | uah | uah
-香 | yong | yong | yok | yok
+香* | yong | yong | yok | yok
 秋 | iu | iu | iuh | iuh
 山 | ang | ang | ak | ak
 开 | ai | ai | aih | aih
