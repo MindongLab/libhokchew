@@ -31,7 +31,7 @@
 东 | eoyng | ooyng | eoyk | ooyk
 郊 | au | au | auh | auh
 过 | uo | uo | uoh | uoh
-西 | e | a | eh | ah
+西 | e | a | eh† | ah†
 桥 | yo | yo | yoh | yoh
 鸡 | ie | ie | ieh | ieh
 声 | iang | iang | iak | iak
@@ -39,8 +39,8 @@
 初 | eo | oo | eoh | ooh
 天 | ieng | ieng | iek | iek
 奇 | ia | ia | ieh | ieh
-歪 | uai | uai | uaih | uaih
-沟 | eu | au | euh | auh
+歪 | uai | uai | uaih† | uaih†
+沟 | eu | au | euh† | auh†
 伓 | ng | ng |  | 
 
 
