@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>LibHokchew.Shared</id>
+    <version>0.1.0</version>
+    <authors>ztl8702</authors>
+    <owners>ztl8702</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/MindongLab/libhokchew/</projectUrl>
+    <description>LibHokchew.Shared</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2020</copyright>
+    <tags>Hokchew</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Google.Protobuf" version="3.11.4" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="./LibHokchew.Shared/bin/Release/netstandard2.0/LibHokchew.Shared.dll" target="lib/netstandard2.0/LibHokchew.Shared.dll" />  
+  </files>
+</package>
