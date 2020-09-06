@@ -18,6 +18,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="./LibHokchew.Shared/bin/Release/netstandard2.0/LibHokchew.Shared.dll" target="lib/netstandard2.0/LibHokchew.Shared.dll" />  
+    <file src="./LibHokchew.Shared/src/bin/Release/netstandard2.0/LibHokchew.Shared.dll" target="lib/netstandard2.0/LibHokchew.Shared.dll" />  
   </files>
 </package>
