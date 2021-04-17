@@ -29,7 +29,8 @@ namespace LibHokchew.Shared
             {'語', Initial.Ng},
             {'语', Initial.Ng},
             {'出', Initial.C},
-            {'非', Initial.H}
+            {'非', Initial.H}, // 《戚林八音校注》正文写“非”。
+            {'喜', Initial.H}  // 八音字母歌中是“喜”。
         };
 
         private static readonly IDictionary<char, Final> CharToFinal = new Dictionary<char, Final>() {
