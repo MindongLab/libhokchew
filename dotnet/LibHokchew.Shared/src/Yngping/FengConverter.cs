@@ -134,7 +134,7 @@ namespace LibHokchew.Shared.Yngping
             {
                 return InitialMapping[i] + FinalMapping[f] + ToneMapping[t];
             }
-            return yngpingInitial + yngpingFinal + yngpingTone;
+            return null;
         }
 
         /// <summary>
@@ -147,7 +147,7 @@ namespace LibHokchew.Shared.Yngping
             {
                 return ToFeng(parsed.Value.Item1, parsed.Value.Item2, parsed.Value.Item3);
             }
-            return yngping;
+            return null;
         }
     }
 }

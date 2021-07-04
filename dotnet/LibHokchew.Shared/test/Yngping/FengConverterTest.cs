@@ -17,5 +17,10 @@ namespace LibHokchew.Shared.Yngping
             Assert.Equal(fengIpa, FengConverter.ToFeng(yngping));
         }
 
+        public void ToFeng_ReturnsNullOnError(string yngping, string fengIpa)
+        {
+            Assert.Null(FengConverter.ToFeng("abc"));
+        }
+
     }
 }
