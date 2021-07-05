@@ -54,7 +54,7 @@ namespace LibHokchew.Shared.Yngping
             {"au", "au"},
             {"iau", "iau"},
             {"eu", "ɛu"},
-            {"ieu", "ieu"},
+            {"iu", "ieu"},
             {"ui", "uoi"},
             {"ing", "iŋ"},
             {"eing", "ɛiŋ"},

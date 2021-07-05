@@ -2,13 +2,13 @@
 <package>
   <metadata>
     <id>LibHokchew.Shared</id>
-    <version>0.3.2</version>
+    <version>0.3.3</version>
     <authors>ztl8702</authors>
     <owners>ztl8702</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectUrl>https://github.com/MindongLab/libhokchew/</projectUrl>
     <description>LibHokchew.Shared</description>
-    <releaseNotes>fix: ToFeng should return null on error</releaseNotes>
+    <releaseNotes>fix: "iu" mapping in FengConverter</releaseNotes>
     <copyright>Copyright 2020</copyright>
     <tags>Hokchew</tags>
     <dependencies>
