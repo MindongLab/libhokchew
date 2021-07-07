@@ -12,6 +12,7 @@ namespace LibHokchew.Shared.Yngping
         [InlineData("tui53", "t'uoi˥˧")]
         // 闷
         [InlineData("moung242", "mouŋ˨˦˨")]
+        [InlineData("oung242", "ouŋ˨˦˨")]
         public void ToFeng(string yngping, string fengIpa)
         {
             Assert.Equal(fengIpa, FengConverter.ToFeng(yngping));
