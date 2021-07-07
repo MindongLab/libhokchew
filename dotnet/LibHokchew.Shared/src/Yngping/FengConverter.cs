@@ -13,6 +13,7 @@ namespace LibHokchew.Shared.Yngping
     {
 
         private static readonly Dictionary<string, string> InitialMapping = new Dictionary<string, string> {
+            {"", ""},
             {"b","p"},
             {"p", "p'"},
             {"m", "m"},
