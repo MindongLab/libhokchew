@@ -23,7 +23,7 @@
   "devDependencies": {
     "@bazel/bazelisk": "1.11.0",
     "@bazel/ibazel": "0.15.10",
-    "@bazel/jasmine": "1.7.0",
+    "@bazel/jasmine": "4.6.1",
     "@bazel/rollup": "1.7.0",
     "@bazel/terser": "1.7.0",
     "@bazel/typescript": "1.7.0",
