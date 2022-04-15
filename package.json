@@ -27,7 +27,7 @@
     "@bazel/rollup": "1.7.0",
     "@bazel/terser": "1.7.0",
     "@bazel/typescript": "1.7.0",
-    "@types/jasmine": "3.10.5",
+    "@types/jasmine": "3.10.6",
     "rollup": "2.70.1",
     "rollup-plugin-commonjs": "10.1.0",
     "rollup-plugin-node-resolve": "5.2.0",
