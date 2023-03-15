@@ -8,7 +8,7 @@ jobs:
     - uses: actions/checkout@master
 
     - name: Bazel build
-      uses: docker://l.gcr.io/google/bazel:1.2.1@sha256:6428db119dc31925cbc73b45b182ab8ce7d88ed821f5f2b4948363b79e17513c
+      uses: docker://l.gcr.io/google/bazel:3.5.0@sha256:ace9881e6e9c5d48b5fd637321361aeffe54000265894a65f7d818dc1065bd80
       with:
         entrypoint: /bin/bash
         args: -c "bazel build //python:wheel && cp -r bazel-bin/ bazel-bin-copy/"
