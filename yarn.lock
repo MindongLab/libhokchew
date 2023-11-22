@@ -140,10 +140,10 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
   integrity sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==
 
-"@types/jasmine@3.10.14":
-  version "3.10.14"
-  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.10.14.tgz#f7ab75affb29d5d1cf769735087615a084c0e021"
-  integrity sha512-EQOSsJYTu0+chFC4eog1ITlZyaEh5GLkrjtqnBKAu9kCL9k4n4rTutNJPFgW33CTv0UCDrgEJGuk3r4piHADmQ==
+"@types/jasmine@5.1.4":
+  version "5.1.4"
+  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-5.1.4.tgz#0de3f6ca753e10d1600ce1864ae42cfd47cf9924"
+  integrity sha512-px7OMFO/ncXxixDe1zR13V1iycqWae0MxTaw62RpFlksUi5QuNWgQJFkTQjIOvrmutJbI7Fp2Y2N1F6D2R4G6w==
 
 "@types/long@^4.0.0":
   version "4.0.1"
